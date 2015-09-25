@@ -3,17 +3,18 @@ import requests
 from requests_oauthlib import OAuth1
 from cgi import parse_qs
 
+REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
+AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
+ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
+
+with open('config.txt') as file:
+    file=file.read()
+    CONSUMER_KEY = file[0]
+    CONSUMER_SECRET = file[1]  
+ 
 class auth_zshtwt(object):  
 
-    REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
-    AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
-    ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
-
-    with open('config.txt') as file:
-        file=file.read()
-        CONSUMER_KEY = file[0]
-        CONSUMER_SECRET = file[1]  
-    def __init__(self):
+   def __init__(self):
         #Request client token
         self.oauth = OAuth1(CONSUMER_KEY, client_secret=CONSUMER_SECRET)
         req = requests.post(url=REQUEST_TOKEN_URL, auth=self.oauth)
