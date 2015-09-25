@@ -9,8 +9,6 @@ class auth_zshtwt(object):
     AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
     ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
-    CONSUMER_KEY = 'ZKaIyDmc4mR506aPjojktLsUN'
-    CONSUMER_SECRET = '1t3oyb5oCqGx9ZiumazclQ5hCRjxkDS6BEK1WiSRTSO1S6p4Y9'
     REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
     AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
     ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
