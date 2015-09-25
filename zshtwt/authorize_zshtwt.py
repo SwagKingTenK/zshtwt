@@ -9,25 +9,12 @@ class auth_zshtwt(object):
     AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
     ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
-    REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
-    AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
-    ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
-
     with open('config.txt') as file:
         file=file.read()
         CONSUMER_KEY = file[0]
         CONSUMER_SECRET = file[1]  
-    
-    
     def __init__(self):
         #Request client token
-        REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
-        AUTHORIZE_URL = 'https://api.twitter.com/oauth/authorize?oauth_token='
-        ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
-
-        CONSUMER_KEY = 'ZKaIyDmc4mR506aPjojktLsUN'
-        CONSUMER_SECRET = '1t3oyb5oCqGx9ZiumazclQ5hCRjxkDS6BEK1WiSRTSO1S6p4Y9'
-        
         self.oauth = OAuth1(CONSUMER_KEY, client_secret=CONSUMER_SECRET)
         req = requests.post(url=REQUEST_TOKEN_URL, auth=self.oauth)
         #Gather credentials
