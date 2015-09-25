@@ -31,8 +31,7 @@ class auth_zshtwt(object):
         self.credentials = parse_qs(req.text)
         self.token = self.credentials.get('oauth_token')[0]
         self.secret = self.credentials.get('oauth_token_secret')[0]
-        
-    def get_oauth(self, OAUTH_TOKEN,OAUTH_TOKEN_SECRET):
+   def get_oauth(self, OAUTH_TOKEN,OAUTH_TOKEN_SECRET):
         self.oauth = OAuth1(CONSUMER_KEY, client_secret=CONSUMER_SECRET, resource_owner_key=OAUTH_TOKEN, resource_owner_secret=OAUTH_TOKEN_SECRET)
         return self.oauth
 
