@@ -43,10 +43,6 @@ class Auth(object):
        self.token = self.credentials.get('oauth_token')[0]
        self.secret = self.credentials.get('oauth_token_secret')[0]
        with open('user_config.txt', 'w') as file:
-<<<<<<< HEAD
            file.write(self.token+'\n'+self.secret)
        print(self.token)
-=======
-           file.write(self.secret+'\n'+self.token)
->>>>>>> 769f4e5a3887c4b8214be9017b323cb2feee4e89
        return self.token, self.secret
