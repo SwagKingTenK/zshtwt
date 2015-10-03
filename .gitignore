@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 *.txt
 test.py
-=======
 zshtwt/config.txt
 zshtwt/user_config.txt
->>>>>>> 769f4e5a3887c4b8214be9017b323cb2feee4e89
+zshtwt/__pycache/
