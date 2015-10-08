@@ -2,4 +2,4 @@
 test.py
 zshtwt/config.txt
 zshtwt/user_config.txt
-zshtwt/__pycache/
+zshtwt/__pycache/*
