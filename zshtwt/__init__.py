@@ -1,6 +1,5 @@
+
 from zshtwt import user
-from zshtwt import authorize_zshtwt
 
-Auth = authorize_zshtwt.Auth().oauth
-User = user.User(Auth)
-
+User = user.User('user_config.txt', 'followers.csv', 'following.csv')
+User.authUser()
